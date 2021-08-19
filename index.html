@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-09RZCC4ZK4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-09RZCC4ZK4");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="GPS Coordinates Converter" />
+    <meta
+      name="description"
+      content="Convert GPS coordinates from DD format to DMS format"
+    />
+    <meta
+      property="og:title"
+      content="Convert GPS coordinates from DD format to DMS format"
+    />
+    <meta
+      property="og:url"
+      content="https://www.codeeverydamnday.com/projects/gpsconverter/index.html/"
+    />
+    <meta
+      property="og:description"
+      content="Convert GPS coordinates from DD format to DMS format"
+    />
+    <meta property="og:image" content="images/coordinates-converter-preview.png" />
+    <meta property="og:type" content="website" />
+    <link rel="apple-touch-icon" href="images/coordinates-converter-preview.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="icon" href="images/siteicon.png">
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@600&family=Montserrat:wght@300;600&display=swap&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>GPS Coordinates Converter | Code Every Damn Day</title>
+  </head>
+
+  <body>
+    <div id="maincontent">
+      <h1>GPS Coordinates Converter:<br>DD to DMS</h1>
+      <p>The most common formats of GPS coordinates are DD (Decimal Degrees) and DMS (Degrees, Minutes, Seconds).</p>
+      <p><strong>DD Example: 47.527859, -120.821021</strong><br>&nbsp;&nbsp;Positive left value = North<br>&nbsp;&nbsp;Negative left value = South<br>&nbsp;&nbsp;Positive right value = East<br>&nbsp;&nbsp;Negative right value = West</p>
+      <p><strong>DMS Example: 47&deg; 31' 40" N, 120&deg; 49' 15" W</strong><br>&nbsp;&nbsp;Left side = Latitute, right side = Longitude</p>
+      <form action="#" autocomplete="off">
+        <p id="leftvaluetext">Enter your left DD value:</br>
+        <input type="text" placeholder="Left value" id="leftvalue" /></p>
+        <p id="rightvaluetext">Enter your right DD value:<br>
+        <input type="text" placeholder="Right value" id="rightvalue" /></p>
+        <p><button type="button" id="submitCoords" onClick="convertCoords()">
+          Convert!</button></p>
+      </form>
+      <p id="dmsCoords"></p>
+      <br>
+      <p id="backtohome"><a href="https://www.codeeverydamnday.com/"">&larr; Back to CodeEveryDamnDay.com</a></p>
+    </div>
+  </body>
+</html>
