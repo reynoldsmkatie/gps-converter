@@ -49,6 +49,12 @@ p {
   font-weight: bold;
 }
 
+#reset {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
 #backtohome {
   font-size: 12px;
 }
