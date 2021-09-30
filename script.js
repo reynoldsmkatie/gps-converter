@@ -4,10 +4,15 @@
 // For seconds: Take the number to the right of THAT decimal (including decimal), and multiply by 60. The whole number from result is seconds.
 // Note: DD format, "-" sign means South or West, no sign means North or East
 // Note: DMS format, no negative numbers, so use absolute values to make DD numbers positive
-// To do later: Add more cases for if the user clicks Convert without entering any coordinates, or only entering one of the two values. Currently resolves to NaN. Also, add functionality to run function on "Enter" instead of just click.
 
 function convertCoords () {
     let finalConversion = document.getElementById('dmsCoords');
+    // Message that will display if user leaves any fields empty
+    const leftVal = document.getElementById("leftvalue");
+    const rightVal = document.getElementById("rightvalue");
+    if (leftVal.value === "" || rightVal.value === "") {
+        finalConversion.innerHTML = "Please enter both coordinates.";
+    } else {    
     // Get the left degrees
     let leftValue = document.getElementById('leftvalue').value;
     let leftDegreesString = leftValue.toString();
@@ -59,4 +64,14 @@ function convertCoords () {
     else {
         finalConversion.innerHTML = "This is not a valid GPS coordinate format."
     }
+}
+}
+
+// Reset Form
+
+function resetform () {
+    const leftVal = document.getElementById("leftvalue");
+    const rightVal = document.getElementById("rightvalue");
+    leftVal.value = "";
+    rightVal.value = "";
 }
